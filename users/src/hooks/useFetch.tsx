@@ -57,7 +57,7 @@ const useFetch = (url, initialData, userId) => {
         }, [url])
 
 
-        return [{data, loading, error}]
+        return [data, loading, error]
 
 
 

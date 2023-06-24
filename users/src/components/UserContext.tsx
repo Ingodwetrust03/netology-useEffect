@@ -13,10 +13,10 @@ export const UserProvider = ({children}) => {
     }
 
     const USERS_API_URL = 'https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/users.json'
-    const[{data: users, loading}] = useFetch(USERS_API_URL, [], userId === null)
+    const[users, loading] = useFetch(USERS_API_URL, [], userId === null)
 
     const USER_API_URL = `https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/${userId}.json`
-    const[{data: user}] = useFetch(USER_API_URL, {
+    const[user] = useFetch(USER_API_URL, {
             "id": undefined,
             "name": "",
             "avatar": "",
