@@ -1,8 +1,12 @@
 import ListItem from "./ListItem";
+import {useContext} from "react";
+import {UserContext} from "./UserContext";
 
 
 
-const List = ({loading, users}) => {
+const List = () => {
+    const {users, loading} = useContext(UserContext)
+
     return (
         <>
             {loading ? <p>loading...</p> : ''}

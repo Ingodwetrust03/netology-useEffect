@@ -1,9 +1,9 @@
 import {useContext} from "react";
-import {UserIdContext} from "./UserIdContext";
+import {UserContext} from "./UserContext";
 
 
 const Details = () => {
-    const {user, userId} = useContext(UserIdContext)
+    const {user, userId} = useContext(UserContext)
 
     const userProfile = <ul className="list-group user-profile" id={userId}>
         <li className="list-group-item"><img src={user.avatar} alt={user.name} /></li>
